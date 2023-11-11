@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electric Sheep Game</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="logo.png">
+</head>
+<body>
+    <p id="score"></p>
+    <div id="main-container">
+        <div class='container' id="container">
+            <p id="electric-sheep"> Electric Sheep Game </p>
+            <p id="word-help"> </p>
+            <p id="screen"> </p>
+            <input type="text" id="text-user" placeholder="Enter your word">
+            <p id="message-word">Enter word</p>
+            <button onclick="view()">Click Me</button>
+            <p id="game-credit"> game by: 2k2carloh </p>
+        </div>
+    
+        <div id="table-word-correct">
+            <p class="table-text">Correct answers</p>
+            <span class="line"></span>
+            <p id="table-word"></p>
+        </div>
+    </div>
+
+    <script src="main.js"> </script>
+</body>
+</html>
