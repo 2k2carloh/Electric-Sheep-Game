@@ -8,7 +8,17 @@
     <link rel="icon" href="logo.png">
 </head>
 <body>
-    <p id="score"></p>
+
+    <div id="start-game">
+        <p id="start-game-text">Electric Sheep Game</p>
+        <p>A minigame where you will have to guess one of the words they show you</p>
+        <button onclick="startGame()" id="start-game-button">Start game</button>
+    </div>
+
+    <div id="nav">
+        <img src="logo.png" alt="">
+        <p id="score"></p>
+    </div>
     <div id="main-container">
         <div class='container' id="container">
             <p id="electric-sheep"> Electric Sheep Game </p>
@@ -17,13 +27,18 @@
             <input type="text" id="text-user" placeholder="Enter your word">
             <p id="message-word">Enter word</p>
             <button onclick="view()">Click Me</button>
+            <p id="help-word"> </p>
             <p id="game-credit"> game by: 2k2carloh </p>
         </div>
     
-        <div id="table-word-correct">
-            <p class="table-text">Correct answers</p>
-            <span class="line"></span>
-            <p id="table-word"></p>
+        <div id="defeat-main-container">
+            <p class="red lost-text">You have lost :( </p>
+            <button onclick="restartGame()" class="restart-button">Restart Game </button>
+            <div id="table-word-correct">
+                <p class="table-text">Correct answers</p>
+                <span class="line"></span>
+                <p id="table-word"></p>
+            </div>
         </div>
     </div>
 
