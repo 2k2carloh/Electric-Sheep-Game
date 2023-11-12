@@ -21,10 +21,8 @@
 
 
     color: rgb(30, 120, 255);
-
-
-
 }
+
 
 #start-game-button {
     color: black;
@@ -96,6 +94,7 @@ button {
 
 button:hover {
     background-color: rgb(0, 102, 255);
+    cursor: pointer;
 }
 
 #text-user {
@@ -158,8 +157,72 @@ button:hover {
     margin-top: 30px;
 
     border-radius: 10px;
+}
 
+#instructions-button {
+    font-size: 40px;
+    cursor: pointer;
+}
 
+#instructions-button:hover {
+    transform: scale(1.2);
+}
+
+#instructions-container {
+    display: none;
+
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+    flex-direction: column;
+}
+
+#instructions-container p {
+    padding: 10px;
+}
+
+#example-words {
+    background-color: #e0e0e0;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+    margin: 10px;
+}
+
+#example-win {
+    background-color: #f0f0f0;
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+
+#example-lose {
+
+    display: flex;
+
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+    flex-direction: column;
+    margin: 20px;
+}
+
+#return-button {
+    background-color: rgb(67, 255, 76);
+    padding: 10px 20px;
+    font-size: 30px;
+    margin: 20px;
+}
+
+#return-button:hover {
+    background-color: rgb(0, 255, 0);
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.example-restart-button {
+    background-color: rgb(67, 255, 76);
 }
 
 #table-word {
@@ -219,7 +282,7 @@ button:hover {
 
 @media only screen and (max-width: 600px) {
     #start-game-text {
-      font-size: 60px;
+        font-size: 60px;
     }
 
     #electric-sheep {
@@ -251,9 +314,11 @@ button:hover {
     #table-word-correct {
 
         font-size: 20px;
-    
+
         margin-top: 30px;
-    
-    
     }
-  }
+
+    #instructions-container {
+        font-size: 20px;
+    }
+}

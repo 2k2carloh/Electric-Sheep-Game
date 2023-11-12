@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,28 @@
     <link rel="stylesheet" href="main.css">
     <link rel="icon" href="logo.png">
 </head>
+
 <body>
 
     <div id="start-game">
         <p id="start-game-text">Electric Sheep Game</p>
         <p>A minigame where you will have to guess one of the words they show you</p>
         <button onclick="startGame()" id="start-game-button">Start game</button>
+        <button onclick="instruccions()" id="instructions-button">Instructions </button>
+    </div>
+
+    <div id="instructions-container">
+        <button onclick="returnMainPage()" id="return-button">Return main page</button>
+        <p>1.- When you start the game they will show you 3 words/phrases, you must guess which of these 3 words is the
+            correct one, to do this they will give you a small clue, example: </p>
+        <p id="example-words">GPU - Ram - Rain</p>
+        <p>2.- When you read the clue and are sure of your answer, you must write it in the indicated box. If your
+            answer is correct you will add a point and new words will appear. If you don't get it right you won't be
+            able to guess any more words and you will be shown the table with the correct words.</p>
+        <p>if you win you will see it</p>
+        <img src="example.png" alt="">
+        <p>But if you lose you will see</p>
+        <img src="example2.png" alt="">
     </div>
 
     <div id="nav">
@@ -30,7 +47,7 @@
             <p id="help-word"> </p>
             <p id="game-credit"> game by: 2k2carloh </p>
         </div>
-    
+
         <div id="defeat-main-container">
             <p class="red lost-text">You have lost :( </p>
             <button onclick="restartGame()" class="restart-button">Restart Game </button>
@@ -44,4 +61,5 @@
 
     <script src="main.js"> </script>
 </body>
+
 </html>

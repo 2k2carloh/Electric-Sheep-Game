@@ -1,14 +1,14 @@
 let originalTextGame = [
-    'Keyboard', 
-    'Mouse', 
-    'GPU', 
-    'Ram', 
-    'I love u <3', 
-    'Bingo', 
-    'Bustamante', 
-    'Chicken Little', 
-    'Lluvia', 
-    'Dinosaurio', 
+    'Keyboard',
+    'Mouse',
+    'GPU',
+    'Ram',
+    'I love u <3',
+    'Bingo',
+    'Bustamante',
+    'Chicken Little',
+    'Lluvia',
+    'Dinosaurio',
     'Loros'
 ];
 
@@ -36,6 +36,16 @@ let helpWord;
 
 let correctWord;
 let score = 0;
+
+function instruccions() {
+    document.getElementById('start-game').style.display = 'none';
+    document.getElementById('instructions-container').style.display = 'flex';
+}
+
+function returnMainPage() {
+    document.getElementById('start-game').style.display = 'flex';
+    document.getElementById('instructions-container').style.display = 'none';
+}
 
 function printWord() {
 
@@ -91,7 +101,7 @@ function startGame() {
 
 function view() {
     let userInput = document.getElementById('text-user').value;
-    if (userInput.toLowerCase() == correctWord.toLowerCase() ) {
+    if (userInput.toLowerCase() == correctWord.toLowerCase()) {
         document.getElementById('message-word').classList.add('green');
         document.getElementById('message-word').innerHTML = 'Congrats! word correct';
         wordCorrect.push(correctWord);
@@ -122,7 +132,7 @@ function restartGame() {
         document.getElementById('message-word').innerHTML = 'Enter word';
         document.getElementById('message-word').classList.remove('green');
         score = 0;
-
+        wordCorrect = [];
         startGame();
     } catch (err) {
         console.log(err);
